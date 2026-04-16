@@ -53,15 +53,16 @@ Self-supervised contrastive learning produces more transferable representations 
 
 ## Repository Structure
 
-
-datasets/     # Data loaders and augmentations
-models/       # Backbone and projection head
-losses/       # Contrastive loss
-training/     # Training scripts
-utils/        # Evaluation and visualization utilities
-outputs/      # Logs and plots
-report/       # Final report
-
+```text
+simclr-representation-learning/
+├── datasets/     # Data loading and augmentations
+├── models/       # Backbone and projection head
+├── losses/       # Contrastive loss
+├── training/     # Training scripts
+├── utils/        # Evaluation and visualization
+├── outputs/      # Logs and plots
+└── report/       # Final report
+```
 ---
 
 ## How to Run
