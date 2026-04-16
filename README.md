@@ -31,10 +31,11 @@ All models are trained **from scratch**, without pretrained weights.
 
 ## Experimental Results
 
-| Model | Test Accuracy (%) |
-|------|-------------------|
-| Random Initialization + Linear | ~ | **86.93** || Random Initialization + Linear | ~10 |
-| **Supervised Training (from scratch)** | **84.17** |
+| Model                               | Test Accuracy (%) |
+|------------------------------------|-------------------|
+| Random Initialization + Linear     | ~10               |
+| **SimCLR + Linear Probing**         | **86.93**         |
+| **Supervised Training (from scratch)** | **84.17**     |
 
 Self-supervised contrastive learning produces more transferable representations than supervised training under identical conditions.
 
@@ -68,29 +69,36 @@ report/       # Final report
 ### Install dependencies
 ```bash
 pip install -r requirements.txt
-
-Train SimCLR
-Shellpython training/train_simclr.pyShow more lines
-Linear Probing
-Shellpython training/train_linear_probe.pyShow more lines
+```
+Train SimCLR (self-supervised pretraining)
+```Shell
+python training/train_simclr.py
+```
+Linear Probing (representation evaluation)
+```Shell
+python training/train_linear_probe.py
+```
 Supervised Baseline
-Shellpython training/train_supervised.pyShow more lines
+```Shell
+python training/train_supervised.py
+```
 
-References
+## References
 
-Chen et al., A Simple Framework for Contrastive Learning of Visual Representations, ICML 2020.
-Krizhevsky & Hinton, Learning Multiple Layers of Features from Tiny Images, 2009.
-He et al., Deep Residual Learning for Image Recognition, CVPR 2016.
-Paszke et al., PyTorch: An Imperative Style, High-Performance Deep Learning Library, NeurIPS 2019.
+- Chen, T., Kornblith, S., Norouzi, M., and Hinton, G.,  
+  *A Simple Framework for Contrastive Learning of Visual Representations*,  
+  ICML, 2020.
 
+- Krizhevsky, A. and Hinton, G.,  
+  *Learning Multiple Layers of Features from Tiny Images*,  
+  University of Toronto, 2009.
+
+- He, K., Zhang, X., Ren, S., and Sun, J.,  
+  *Deep Residual Learning for Image Recognition*,  
+  CVPR, 2016.
+
+- Paszke, A. et al.,  
+  *PyTorch: An Imperative Style, High‑Performance Deep Learning Library*,  
+  NeurIPS, 2019.
 
 ---
-
-## 6️⃣ Git Initialization & First Commit (Terminal)
-
-From inside `simclr-representation-learning/`:
-
-```bash
-git init
-git add .
-git commit -m "Initial SimCLR implementation with evaluation and analysis"
