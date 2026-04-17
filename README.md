@@ -102,4 +102,5 @@ python training/train_supervised.py
   *PyTorch: An Imperative Style, High‑Performance Deep Learning Library*,  
   NeurIPS, 2019.
 
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=Enock02333.simclr-representation-learning&left_color=blue&right_color=green)
 ---
